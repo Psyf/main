@@ -148,11 +148,9 @@ public class XmlAdaptedJob {
         }
 
         JobNote modelJobNote = new JobNote(note);
-
-        // Validation done in XmlAdaptedTag
-        String modelAddedTime = addedTime;
-
         TimeStamp modelStartTime = startTime.toModelType();
+        TimeStamp modelAddedTime = addedTime.toModelType();
+
         Status modelStatus = status;
         Set<Tag> modelTags = new HashSet<>();
         for (XmlAdaptedTag tag : tagged) {
